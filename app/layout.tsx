@@ -26,8 +26,43 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ display: "flex", flexDirection: "column" }}
       >
-        {children}
+        <header
+          className="bg-gray-800 text-white p-4 mt-8"
+          style={{
+            backgroundColor: "lightblue",
+            color: "black",
+            padding: "1rem",
+          }}
+        >
+          <h1 className="text-xl font-bold text-center">My App</h1>
+        </header>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "500px",
+            width: "500px",
+            borderRadius: "8px",
+            backgroundColor: "lavenderblush",
+            color: "black",
+            margin: "10px auto",
+          }}
+        >
+          {children}
+        </div>
+        <footer
+          className="bg-gray-800 text-white p-4 mt-8"
+          style={{
+            backgroundColor: "ghostwhite",
+            padding: "1rem",
+            color: "black",
+          }}
+        >
+          <p className="text-center">&copy; 2026 My App</p>
+        </footer>
       </body>
     </html>
   );
